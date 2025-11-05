@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Distrito de Pacarán</title>
+<style>
+/* Fuente similar a Forte */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Chewy', cursive;
+    color: #000;
+}
+
+/* ==============================
+   Sección principal
+============================== */
+.hero {
+    height: 100vh;
+    background: url('parquepacaran.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    margin-bottom: 60px;
+    width: 100%;
+    background-color: rgba(245, 246, 234, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 3em;
+    color: #000;
+    text-shadow: 2px 2px 5px rgba(255,255,255,0.5);
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.2em;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    padding: 10px 45px;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c40000;
+}
+
+/* ==============================
+   Sección del mapa e información
+============================== */
+.info {
+    background-color: #f9f9f9;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.escudo {
+    position: absolute;
+    top: 75px;
+    left: 30px;
+    width: 150px;
+    filter: drop-shadow(0px 0px 20px rgba(246, 209, 73, 0.7));
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* ==============================
+   Iframe (mapa)
+============================== */
+iframe {
+    width: 80%;
+    height: 650px;
+    border: 3px solid #333;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* ==============================
+   Media Query (para móviles)
+============================== */
+@media (max-width: 768px) {
+    .overlay h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        width: 80%;
+        padding: 10px;
+        right: 10px;
+    }
+
+    iframe {
+        width: 95%;
+        height: 300px;
+    }
+}
+.boton-fijo {
+    position: fixed;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0055cc; 
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.boton-fijo:hover {
+    background-color: #003366;
+    transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<!-- Sección Principal -->
+<section class="hero">
+    <div class="overlay">
+        <h1>Distrito de Pacarán</h1>
+        <a href="#info" class="btn">Ver más</a>
+    </div>
+    <img src="escudopacaran.png" alt="Escudo de Pacarán" class="escudo">
+</section>
+
+<!-- Sección de Información -->
+<section class="info" id="info">
+    <iframe src="https://www.google.com/maps?q=Pacarán,+Cañete,+Lima,+Perú&output=embed" loading="lazy"></iframe>
+</section>
+<a href="./index.html" class="boton-fijo">Inicio</a>   
+</body>
+</html>
